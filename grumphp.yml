@@ -1,0 +1,7 @@
+grumphp:
+  tasks:
+    git_commit_message:
+      enforce_capitalized_subject: false
+      matchers:
+        - '/^(feat|fix|docs|style|refactor|perf|test|chore|ci|build|revert)(\(.+\))?!?: .{1,}/'
+      allow_empty_message: false

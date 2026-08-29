@@ -1,0 +1,16 @@
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: currency_rates_application
+    user: "${UID:-1000}:${GID:-1000}"
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=dev
+    command: >
+      bash -c "composer install &&
+      symfony server:start --port=8000 --no-tls --allow-http --listen-ip=0.0.0.0"
