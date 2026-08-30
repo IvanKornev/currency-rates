@@ -8,7 +8,7 @@ use App\DTO\CurrencyRatePayload;
 
 interface CurrencyRateRepositoryInterface
 {
-    public function save(string $currencyCode, CurrencyRatePayload $payload): void;
+    public function save(CurrencyRatePayload $payload): void;
 
-    public function get(string $currencyCode): ?array;
+    public function getAll(): array;
 }

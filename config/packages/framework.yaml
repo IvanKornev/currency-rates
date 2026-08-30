@@ -1,5 +1,14 @@
 # see https://symfony.com/doc/current/reference/configuration/framework.html
 framework:
+    serializer:
+        default_context:
+            json_encode_options: 448
+
+    exceptions:
+        DomainException:
+            status_code: 400
+            log_level: warning
+
     secret: '%env(APP_SECRET)%'
 
     # Note that the session will be started ONLY if you read or write from it.

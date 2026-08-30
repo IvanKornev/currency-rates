@@ -1,0 +1,852 @@
+{
+    "item": [
+        {
+            "name": "_error",
+            "description": "",
+            "item": [
+                {
+                    "name": "{code}",
+                    "description": "",
+                    "item": [
+                        {
+                            "id": "780d97eb-d2e0-4b0b-8e6a-c02eecd6bd45",
+                            "name": "get preview error",
+                            "request": {
+                                "name": "get preview error",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "_error",
+                                        ":code"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "value": "57372",
+                                            "key": "code",
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "(Required) ",
+                                                "type": "text/plain"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {},
+                                "auth": null
+                            },
+                            "response": [
+                                {
+                                    "id": "896a2c2e-2ef9-4885-8534-e5507d8eabad",
+                                    "name": "default",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "_error",
+                                                ":code"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "57372",
+                                                    "key": "code"
+                                                }
+                                            ]
+                                        },
+                                        "method": "GET",
+                                        "body": {}
+                                    },
+                                    "header": [],
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                }
+                            ],
+                            "event": [],
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            }
+                        },
+                        {
+                            "id": "5dc7538f-8a68-440f-90de-448f1fda7132",
+                            "name": "put preview error",
+                            "request": {
+                                "name": "put preview error",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "_error",
+                                        ":code"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "value": "57372",
+                                            "key": "code",
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "(Required) ",
+                                                "type": "text/plain"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "body": {},
+                                "auth": null
+                            },
+                            "response": [
+                                {
+                                    "id": "73ee0895-2ac7-4a06-829c-695678a302e2",
+                                    "name": "default",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "_error",
+                                                ":code"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "57372",
+                                                    "key": "code"
+                                                }
+                                            ]
+                                        },
+                                        "method": "PUT",
+                                        "body": {}
+                                    },
+                                    "header": [],
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                }
+                            ],
+                            "event": [],
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            }
+                        },
+                        {
+                            "id": "4aa8a4c4-0a89-464c-b078-f1266474f622",
+                            "name": "post preview error",
+                            "request": {
+                                "name": "post preview error",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "_error",
+                                        ":code"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "value": "57372",
+                                            "key": "code",
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "(Required) ",
+                                                "type": "text/plain"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "body": {},
+                                "auth": null
+                            },
+                            "response": [
+                                {
+                                    "id": "b250b1b6-b0fa-4f2a-81e0-66520595ade0",
+                                    "name": "default",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "_error",
+                                                ":code"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "57372",
+                                                    "key": "code"
+                                                }
+                                            ]
+                                        },
+                                        "method": "POST",
+                                        "body": {}
+                                    },
+                                    "header": [],
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                }
+                            ],
+                            "event": [],
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            }
+                        },
+                        {
+                            "id": "14eab30c-9e5a-4305-9e1d-3125f1442114",
+                            "name": "delete preview error",
+                            "request": {
+                                "name": "delete preview error",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "_error",
+                                        ":code"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "value": "57372",
+                                            "key": "code",
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "(Required) ",
+                                                "type": "text/plain"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "body": {},
+                                "auth": null
+                            },
+                            "response": [
+                                {
+                                    "id": "41037f7a-2634-4e30-82e9-fe2558ca2e5d",
+                                    "name": "default",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "_error",
+                                                ":code"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "57372",
+                                                    "key": "code"
+                                                }
+                                            ]
+                                        },
+                                        "method": "DELETE",
+                                        "body": {}
+                                    },
+                                    "header": [],
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                }
+                            ],
+                            "event": [],
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            }
+                        },
+                        {
+                            "id": "47ed207f-6567-4ad4-b93a-3ea1ade52a45",
+                            "name": "options preview error",
+                            "request": {
+                                "name": "options preview error",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "_error",
+                                        ":code"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "value": "57372",
+                                            "key": "code",
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "(Required) ",
+                                                "type": "text/plain"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "method": "OPTIONS",
+                                "body": {},
+                                "auth": null
+                            },
+                            "response": [
+                                {
+                                    "id": "0ca8cafa-9665-417e-9162-df066870b1fa",
+                                    "name": "default",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "_error",
+                                                ":code"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "57372",
+                                                    "key": "code"
+                                                }
+                                            ]
+                                        },
+                                        "method": "OPTIONS",
+                                        "body": {}
+                                    },
+                                    "header": [],
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                }
+                            ],
+                            "event": [],
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            }
+                        },
+                        {
+                            "id": "ca539332-d67f-488e-a79a-d8be4c7e8fbd",
+                            "name": "head preview error",
+                            "request": {
+                                "name": "head preview error",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "_error",
+                                        ":code"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "value": "57372",
+                                            "key": "code",
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "(Required) ",
+                                                "type": "text/plain"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "method": "HEAD",
+                                "body": {},
+                                "auth": null
+                            },
+                            "response": [
+                                {
+                                    "id": "b4ea5ca2-847a-4461-a284-19ffec44bb83",
+                                    "name": "default",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "_error",
+                                                ":code"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "57372",
+                                                    "key": "code"
+                                                }
+                                            ]
+                                        },
+                                        "method": "HEAD",
+                                        "body": {}
+                                    },
+                                    "header": [],
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                }
+                            ],
+                            "event": [],
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            }
+                        },
+                        {
+                            "id": "aee797ed-b02a-4b7d-a91d-b7cc78f72c58",
+                            "name": "patch preview error",
+                            "request": {
+                                "name": "patch preview error",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "_error",
+                                        ":code"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "value": "57372",
+                                            "key": "code",
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "(Required) ",
+                                                "type": "text/plain"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "method": "PATCH",
+                                "body": {},
+                                "auth": null
+                            },
+                            "response": [
+                                {
+                                    "id": "50ede211-f607-485e-b13c-0ce50ea7ffae",
+                                    "name": "default",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "_error",
+                                                ":code"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "57372",
+                                                    "key": "code"
+                                                }
+                                            ]
+                                        },
+                                        "method": "PATCH",
+                                        "body": {}
+                                    },
+                                    "header": [],
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                }
+                            ],
+                            "event": [],
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            }
+                        },
+                        {
+                            "id": "664d4f98-6382-4e8a-b5e5-10fce852312c",
+                            "name": "trace preview error",
+                            "request": {
+                                "name": "trace preview error",
+                                "description": {},
+                                "url": {
+                                    "path": [
+                                        "_error",
+                                        ":code"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "value": "57372",
+                                            "key": "code",
+                                            "disabled": false,
+                                            "description": {
+                                                "content": "(Required) ",
+                                                "type": "text/plain"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "method": "TRACE",
+                                "body": {},
+                                "auth": null
+                            },
+                            "response": [
+                                {
+                                    "id": "fa4da059-57da-4cf9-9dc3-70ce0805f703",
+                                    "name": "default",
+                                    "originalRequest": {
+                                        "url": {
+                                            "path": [
+                                                "_error",
+                                                ":code"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [],
+                                            "variable": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "type": "any",
+                                                    "value": "57372",
+                                                    "key": "code"
+                                                }
+                                            ]
+                                        },
+                                        "method": "TRACE",
+                                        "body": {}
+                                    },
+                                    "header": [],
+                                    "cookie": [],
+                                    "_postman_previewlanguage": "text"
+                                }
+                            ],
+                            "event": [],
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "api",
+            "description": "",
+            "item": [
+                {
+                    "name": "currency",
+                    "description": "",
+                    "item": [
+                        {
+                            "name": "rates",
+                            "description": "",
+                            "item": [
+                                {
+                                    "id": "90040810-61c3-4b90-9177-97edd6cd314f",
+                                    "name": "get currency rates get all",
+                                    "request": {
+                                        "name": "get currency rates get all",
+                                        "description": {},
+                                        "url": {
+                                            "path": [
+                                                "api",
+                                                "currency",
+                                                "rates"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "base",
+                                                    "value": "<string>"
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            }
+                                        ],
+                                        "method": "GET",
+                                        "body": {},
+                                        "auth": null
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "8a19c666-3d9b-44f0-9020-74c656ba3ea8",
+                                            "name": "Currency Rates List",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "api",
+                                                        "currency",
+                                                        "rates"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [
+                                                        {
+                                                            "disabled": false,
+                                                            "description": {
+                                                                "content": "",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "key": "base",
+                                                            "value": "<string>"
+                                                        }
+                                                    ],
+                                                    "variable": []
+                                                },
+                                                "header": [
+                                                    {
+                                                        "key": "Accept",
+                                                        "value": "application/json"
+                                                    }
+                                                ],
+                                                "method": "GET",
+                                                "body": {}
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "body": "[\n  {\n    \"code\": \"<string>\",\n    \"rate\": \"<float>\"\n  },\n  {\n    \"code\": \"<string>\",\n    \"rate\": \"<float>\"\n  }\n]",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "json"
+                                        }
+                                    ],
+                                    "event": [],
+                                    "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "name": "convert",
+                            "description": "",
+                            "item": [
+                                {
+                                    "id": "941a82c4-ed13-42bc-be16-0345df8b88ab",
+                                    "name": "get currency convert",
+                                    "request": {
+                                        "name": "get currency convert",
+                                        "description": {},
+                                        "url": {
+                                            "path": [
+                                                "api",
+                                                "currency",
+                                                "convert"
+                                            ],
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "query": [
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "amount",
+                                                    "value": "<float>"
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "from",
+                                                    "value": "<string>"
+                                                },
+                                                {
+                                                    "disabled": false,
+                                                    "description": {
+                                                        "content": "(Required) ",
+                                                        "type": "text/plain"
+                                                    },
+                                                    "key": "to",
+                                                    "value": "<string>"
+                                                }
+                                            ],
+                                            "variable": []
+                                        },
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            }
+                                        ],
+                                        "method": "GET",
+                                        "body": {},
+                                        "auth": null
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "da474174-bcf2-4840-84ee-34b63dbed5a3",
+                                            "name": "Currencies Convertation Results",
+                                            "originalRequest": {
+                                                "url": {
+                                                    "path": [
+                                                        "api",
+                                                        "currency",
+                                                        "convert"
+                                                    ],
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "query": [
+                                                        {
+                                                            "disabled": false,
+                                                            "description": {
+                                                                "content": "(Required) ",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "key": "amount",
+                                                            "value": "<float>"
+                                                        },
+                                                        {
+                                                            "disabled": false,
+                                                            "description": {
+                                                                "content": "(Required) ",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "key": "from",
+                                                            "value": "<string>"
+                                                        },
+                                                        {
+                                                            "disabled": false,
+                                                            "description": {
+                                                                "content": "(Required) ",
+                                                                "type": "text/plain"
+                                                            },
+                                                            "key": "to",
+                                                            "value": "<string>"
+                                                        }
+                                                    ],
+                                                    "variable": []
+                                                },
+                                                "header": [
+                                                    {
+                                                        "key": "Accept",
+                                                        "value": "application/json"
+                                                    }
+                                                ],
+                                                "method": "GET",
+                                                "body": {}
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "body": "{\n  \"amount\": \"<float>\",\n  \"currency_from\": {\n    \"code\": \"<string>\",\n    \"rate\": \"<float>\"\n  },\n  \"currency_to\": {\n    \"code\": \"<string>\",\n    \"rate\": \"<float>\"\n  }\n}",
+                                            "cookie": [],
+                                            "_postman_previewlanguage": "json"
+                                        }
+                                    ],
+                                    "event": [],
+                                    "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "/"
+        }
+    ],
+    "info": {
+        "_postman_id": "d909e977-8bce-4455-9e95-bbc0d7b596f7",
+        "name": "Imported from OpenAPI",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "",
+            "type": "text/plain"
+        }
+    }
+}

@@ -4,15 +4,17 @@ declare(strict_types=1);
 
 namespace App\Services;
 
+use App\Domain\CurrencyRates;
 use App\DTO\CurrencyRatePayload;
 use App\Providers\Contracts\CurrencyRateProviderInterface;
 use App\Repositories\Contracts\CurrencyRateRepositoryInterface;
-use App\Services\Contracts\CurrencyRateServiceInterface;
+use App\Services\Contracts\CurrencyServiceInterface;
+use Exception;
 use LogicException;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\DependencyInjection\Attribute\AutowireIterator;
 
-final class CurrencyRateService implements CurrencyRateServiceInterface
+final class CurrencyService implements CurrencyServiceInterface
 {
     /**
      * @param iterable<CurrencyRateProviderInterface> $providers
@@ -24,7 +26,7 @@ final class CurrencyRateService implements CurrencyRateServiceInterface
         private readonly ?LoggerInterface $logger = null,
     ) {}
 
-    public function update(string $currencyCode): void
+    public function updateRates(): void
     {
         $rates = [];
         $successCount = 0;
@@ -37,28 +39,34 @@ final class CurrencyRateService implements CurrencyRateServiceInterface
                     throw new LogicException("Duplicate currency rate provider type \"$type\" detected");
                 }
 
-                $rates[$type] = $provider->fetch($currencyCode);
+                $rates[$type] = $provider->fetch();
                 $successCount++;
             } catch (LogicException $e) {
                 throw $e;
             } catch (\Throwable $e) {
                 $this->logger?->warning('Failed to fetch currency rate {currency} from {provider}', [
                     'provider' => $provider::class,
-                    'currency' => $currencyCode,
                     'error' => $e->getMessage(),
                 ]);
             }
         }
 
         if ($successCount === 0) {
-            throw new \RuntimeException("All currency rate providers failed for code $currencyCode");
+            throw new \RuntimeException('All currency rate providers failed for code');
         }
 
-        $payload = new CurrencyRatePayload(
-            updatedAt: new \DateTimeImmutable(),
-            rates: $rates
-        );
+        $payload = new CurrencyRatePayload(updatedAt: new \DateTimeImmutable(), rates: $rates);
+        $this->ratesRepository->save($payload);
+    }
 
-        $this->ratesRepository->save($currencyCode, $payload);
+    public function getAllRates(): CurrencyRates
+    {
+        $data = $this->ratesRepository->getAll();
+
+        if (!$data) {
+            throw new Exception('Rates data not found. Please run currency:update-rates first');
+        }
+
+        return CurrencyRates::fromStorage($data);
     }
 }

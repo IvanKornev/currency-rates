@@ -12,5 +12,5 @@ interface CurrencyRateProviderInterface
 {
     public function getType(): CurrencyProviderTypeEnum;
 
-    public function fetch(string $currencyCode): array;
+    public function fetch(): array;
 }

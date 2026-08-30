@@ -6,6 +6,7 @@ namespace App\Providers;
 
 use App\Enums\CurrencyProviderTypeEnum;
 use App\Providers\Contracts\CurrencyRateProviderInterface;
+use App\ValueObjects\Money;
 use Symfony\Component\HttpClient\RetryableHttpClient;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
@@ -29,8 +30,9 @@ final class FloatRatesProvider implements CurrencyRateProviderInterface
         return CurrencyProviderTypeEnum::FIAT;
     }
 
-    public function fetch(string $currencyCode): array
+    public function fetch(): array
     {
+        $currencyCode = Money::DEFAULT_CURRENCY;
         $url = self::BASE_URL . "/daily/$currencyCode.json";
         $response = $this->httpClient->request('GET', $url);
 

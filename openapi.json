@@ -1,0 +1,332 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "",
+        "version": "0.0.0"
+    },
+    "paths": {
+        "/_error/{code}": {
+            "get": {
+                "operationId": "get__preview_error",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "put": {
+                "operationId": "put__preview_error",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "operationId": "post__preview_error",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "delete__preview_error",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "options": {
+                "operationId": "options__preview_error",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "head": {
+                "operationId": "head__preview_error",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "patch": {
+                "operationId": "patch__preview_error",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            },
+            "trace": {
+                "operationId": "trace__preview_error",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "pattern": "\\d+"
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/currency/rates": {
+            "get": {
+                "tags": [
+                    "Currency"
+                ],
+                "operationId": "get_currency_rates_get_all",
+                "parameters": [
+                    {
+                        "name": "base",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "example": "USD"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Currency Rates List",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/CurrencyRateResponseDto"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/currency/convert": {
+            "get": {
+                "tags": [
+                    "Currency"
+                ],
+                "operationId": "get_currency_convert",
+                "parameters": [
+                    {
+                        "name": "amount",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "number",
+                            "format": "float",
+                            "example": 100
+                        }
+                    },
+                    {
+                        "name": "from",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "USD"
+                        }
+                    },
+                    {
+                        "name": "to",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "EUR"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Currencies Convertation Results",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CurrencyConvertResponseDto"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "CurrencyRateRequestDto": {
+                "properties": {
+                    "base": {
+                        "type": "string",
+                        "default": "USD",
+                        "maxLength": 3,
+                        "minLength": 3
+                    }
+                },
+                "type": "object"
+            },
+            "CurrencyConvertRequestDto": {
+                "required": [
+                    "amount",
+                    "from",
+                    "to"
+                ],
+                "properties": {
+                    "amount": {
+                        "type": "number",
+                        "format": "float",
+                        "minimum": 0,
+                        "exclusiveMinimum": true
+                    },
+                    "from": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "minLength": 3
+                    },
+                    "to": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "minLength": 3
+                    }
+                },
+                "type": "object"
+            },
+            "CurrencyRateResponseDto": {
+                "required": [
+                    "code",
+                    "rate"
+                ],
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "example": "USD"
+                    },
+                    "rate": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 1
+                    }
+                },
+                "type": "object"
+            },
+            "CurrencyConvertResponseDto": {
+                "required": [
+                    "amount",
+                    "currency_from",
+                    "currency_to"
+                ],
+                "properties": {
+                    "amount": {
+                        "type": "number",
+                        "format": "float",
+                        "example": 92.45
+                    },
+                    "currency_from": {
+                        "$ref": "#/components/schemas/CurrencyRateResponseDto"
+                    },
+                    "currency_to": {
+                        "$ref": "#/components/schemas/CurrencyRateResponseDto"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Currency"
+        }
+    ]
+}

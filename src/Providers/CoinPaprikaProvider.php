@@ -6,6 +6,7 @@ namespace App\Providers;
 
 use App\Enums\CurrencyProviderTypeEnum;
 use App\Providers\Contracts\CurrencyRateProviderInterface;
+use App\ValueObjects\Money;
 use Symfony\Component\HttpClient\RetryableHttpClient;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
@@ -29,8 +30,9 @@ final class CoinPaprikaProvider implements CurrencyRateProviderInterface
         return CurrencyProviderTypeEnum::CRYPTO;
     }
 
-    public function fetch(string $currencyCode): array
+    public function fetch(): array
     {
+        $currencyCode = Money::DEFAULT_CURRENCY;
         $url = self::BASE_URL . "/exchanges/coinbase/markets?quotes=$currencyCode";
         $response = $this->httpClient->request('GET', $url);
 
@@ -44,9 +46,35 @@ final class CoinPaprikaProvider implements CurrencyRateProviderInterface
     private function adapt(array $cryptoData, string $currencyCode): array
     {
         $rates = [];
+        $volumes = [];
+        $currencyCode = strtoupper($currencyCode);
 
         foreach ($cryptoData as $market) {
-            //
+            if (!isset($market['pair'], $market['quotes'][$currencyCode]['price'])) {
+                continue;
+            }
+
+            $pairParts = explode('/', $market['pair']);
+
+            if (count($pairParts) !== 2) {
+                continue;
+            }
+
+            $baseCurrency = strtoupper($pairParts[0]);
+            $price = (float) $market['quotes'][$currencyCode]['price'];
+
+            if ($price <= 0) {
+                continue;
+            }
+
+            $volume = (float) ($market['quotes'][$currencyCode]['volume_24h'] ?? 0);
+            $inverseRate = 1.0 / $price;
+            $formattedRate = rtrim(rtrim(sprintf('%.20f', $inverseRate), '0'), '.');
+
+            if (!isset($rates[$baseCurrency]) || $volume > $volumes[$baseCurrency]) {
+                $rates[$baseCurrency] = $formattedRate;
+                $volumes[$baseCurrency] = $volume;
+            }
         }
 
         return $rates;

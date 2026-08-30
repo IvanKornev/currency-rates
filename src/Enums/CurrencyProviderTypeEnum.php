@@ -6,6 +6,6 @@ namespace App\Enums;
 
 enum CurrencyProviderTypeEnum: string
 {
-    case CRYPTO = 'crypto';
     case FIAT = 'fiat';
+    case CRYPTO = 'crypto';
 }
