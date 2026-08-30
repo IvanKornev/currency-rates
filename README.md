@@ -1,22 +1,25 @@
 ## Что это?
 
-Выполненное ТЗ на позицию Laravel-разработчика. Его суть
+Выполненное ТЗ на позицию фуллстек-разработчика (PHP, Vue). Его суть
 заключалась в создании API валютных курсов - в частности, для получения курсов других валют
 по базовой валюте, а также их конвертация между собой
+
+<img width="1280" height="755" alt="image" src="https://github.com/user-attachments/assets/4a7ffd4c-c832-413b-a56a-2c3339bca07b" />
+
+<img width="1280" height="601" alt="image" src="https://github.com/user-attachments/assets/ded479fc-2666-48b8-92b5-51c01bf40409" />
 
 ### Как запустить?
 
 1. Запустить контейнеры через docker compose up (или make up);
 
 rates.json можно обновить через php bin/console currency:update-rates из-под контейнера
-(или через make update-rates). Но это необязательно, т.к. в репе уже есть, пусть
-и неактуальная, версия файла
+(или через make update-rates). Но это необязательно, т.к. в репе уже есть
 
 ### Кейворды
 
 1. Symfony 8 (PHP 8.4);
 2. Docker и Docker Compose (для развертывания);
-4. Локальный сервер через Symfony CLI (согласно ТЗ вместо PHP FPM + Nginx);
+4. Локальный сервер через Symfony CLI (согласно ТЗ, и вместо PHP FPM + Nginx);
 5. PHPUnit (юнит и функциональные автотесты);
 6. PHPStan, CS Fixer, GrumPHP (прекоммит хуки, в т.ч. проверка на Conventional Commits) 
 7. Postman и OpenAPI;
