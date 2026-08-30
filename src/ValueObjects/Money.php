@@ -13,6 +13,7 @@ use Brick\Money\Money as MoneyBase;
 
 final class Money
 {
+    private const int FALLBACK_FRACTION_DIGITS = 8;
     public const string DEFAULT_CURRENCY = 'USD';
 
     private function __construct(
@@ -28,7 +29,7 @@ final class Money
                 currencyCode: strtoupper($currency),
                 numericCode: null,
                 name: strtoupper($currency),
-                defaultFractionDigits: 8,
+                defaultFractionDigits: self::FALLBACK_FRACTION_DIGITS,
                 currencyType: CurrencyType::Custom,
             );
         }
