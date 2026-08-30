@@ -4,10 +4,6 @@
 заключалась в создании API валютных курсов - в частности, для получения курсов других валют
 по базовой валюте, а также их конвертация между собой
 
-<img width="1280" height="755" alt="image" src="https://github.com/user-attachments/assets/4a7ffd4c-c832-413b-a56a-2c3339bca07b" />
-
-<img width="1280" height="601" alt="image" src="https://github.com/user-attachments/assets/ded479fc-2666-48b8-92b5-51c01bf40409" />
-
 ### Как запустить?
 
 1. Запустить контейнеры через docker compose up (или make up);
@@ -39,3 +35,7 @@ Functional-тесты написаны под все имеющиеся эндп
 
 Все они стандартно запускаются через php artisan test изнутри запущенного контейнера (можно через
 make test)
+
+<img width="1280" height="755" alt="image" src="https://github.com/user-attachments/assets/4a7ffd4c-c832-413b-a56a-2c3339bca07b" />
+
+<img width="1280" height="601" alt="image" src="https://github.com/user-attachments/assets/ded479fc-2666-48b8-92b5-51c01bf40409" />
