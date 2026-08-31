@@ -34,7 +34,7 @@ Symfony бандлы, которые есть в любом проекте
 Functional-тесты написаны под все имеющиеся эндпоинты. Однако unit-тесты были написаны лишь
 для части классов.
 
-Все они стандартно запускаются через vendor/bin/phpunit изнутри запущенного контейнера (можно через
+Все они стандартно запускаются через vendor/bin/phpunit с -e APP_ENV=test изнутри запущенного контейнера (можно через
 make test)
 
 <img width="1280" height="755" alt="image" src="https://github.com/user-attachments/assets/4a7ffd4c-c832-413b-a56a-2c3339bca07b" />
