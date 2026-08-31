@@ -29,7 +29,6 @@ final class CurrencyService implements CurrencyServiceInterface
     public function updateRates(): void
     {
         $rates = [];
-        $successCount = 0;
 
         foreach ($this->providers as $provider) {
             try {
@@ -40,19 +39,16 @@ final class CurrencyService implements CurrencyServiceInterface
                 }
 
                 $rates[$type] = $provider->fetch();
-                $successCount++;
             } catch (LogicException $e) {
                 throw $e;
             } catch (\Throwable $e) {
-                $this->logger?->warning('Failed to fetch currency rate {currency} from {provider}', [
+                $this->logger?->error('Failed to fetch currency rate from {provider}', [
                     'provider' => $provider::class,
                     'error' => $e->getMessage(),
                 ]);
-            }
-        }
 
-        if ($successCount === 0) {
-            throw new \RuntimeException('All currency rate providers failed for code');
+                throw new \RuntimeException('Currency rate provider failed', 0, $e);
+            }
         }
 
         $payload = new CurrencyRatePayload(updatedAt: new \DateTimeImmutable(), rates: $rates);

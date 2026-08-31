@@ -46,14 +46,14 @@ final class CurrencyServiceTest extends TestCase
         $service->updateRates();
     }
 
-    public function testUpdateThrowsExceptionWhenAllProvidersFail(): void
+    public function testUpdateThrowsExceptionWhenAnyProviderFail(): void
     {
         $fiatProvider = $this->createStub(CurrencyRateProviderInterface::class);
         $fiatProvider->method('getType')->willReturn(CurrencyProviderTypeEnum::FIAT);
         $fiatProvider->method('fetch')->willThrowException(new RuntimeException('API Error'));
 
         $loggerMock = $this->createMock(LoggerInterface::class);
-        $loggerMock->expects($this->once())->method('warning');
+        $loggerMock->expects($this->once())->method('error');
 
         $this->repository->expects($this->never())->method('save');
 
