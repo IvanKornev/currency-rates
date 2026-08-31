@@ -6,7 +6,8 @@
 
 ### Как запустить?
 
-1. Запустить контейнеры через docker compose up (или make up);
+1. На базе .env.example создать полноценный .env файл;
+2. Запустить контейнеры через docker compose up (или make up);
 
 rates.json можно обновить через php bin/console currency:update-rates из-под контейнера
 (или через make update-rates). Но это необязательно, т.к. в репе уже есть
@@ -33,7 +34,7 @@ Symfony бандлы, которые есть в любом проекте
 Functional-тесты написаны под все имеющиеся эндпоинты. Однако unit-тесты были написаны лишь
 для части классов.
 
-Все они стандартно запускаются через php artisan test изнутри запущенного контейнера (можно через
+Все они стандартно запускаются через vendor/bin/phpunit изнутри запущенного контейнера (можно через
 make test)
 
 <img width="1280" height="755" alt="image" src="https://github.com/user-attachments/assets/4a7ffd4c-c832-413b-a56a-2c3339bca07b" />
